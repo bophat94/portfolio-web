@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>cafe・ド・リシャス</title>
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="index.html" rel="stylesheet" type="text/css">
+<link href="menu.html" rel="stylesheet">
+<link href="news_1.html" rel="stylesheet" type="text/css">
+<link href="news_2.html" rel="stylesheet" type="text/css">
+<link href="news_3.html" rel="stylesheet" type="text/css">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/css/6-3-1.css">
+<!--==============スライダー===============-->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="css/6-1-6.css">
+<!--==============フッターsnsアイコン===============-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- ホバー -->
+<link href="css/lightbox.css" rel="stylesheet" type="text/css">
+<link rel="canonical" href="https://lopan.jp/css-animation">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- フワッと出る-->
+  <script>
+    $(function(){
+    $(window).scroll(function (){
+    $('.fadein').each(function(){
+    var targetElement = $(this).offset().top;
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll > targetElement - windowHeight + 200){
+    $(this).css('opacity','1');
+    $(this).css('transform','translateY(0)');
+    }
+    });
+    });
+    });
+    </script>
+</head>
+
+<body>
+  <div  class="header_kaso2">
+  <div  class="header">
+    <header>
+      <nav>      
+      <ul class="header_inner">
+        <li class="header_txt"><a href="history.html" class="link__underbar">cafe・ド・リシャスの歴史<br>HISTORY</a></li>
+        <li class="header_txt"><a href="menu.html" class="link__underbar">メニュー<br>MENU</a></li>
+        <li class="header_txt"><a href="campaign.html" class="link__underbar">キャンペーン<br>CAMPAIGN</a></li>
+        <li class="header_txt"><a href="locations.html" class="link__underbar">店舗情報<br>LOCATIONS</a></li>
+      </ul>
+    </nav>
+    </header>
+    <div class="top_kaso">
+        <div class="his">MENU</div>
+        <div class="title_line"></div>
+        <div class="his_sub">メニュー</div>
+    </div>
+    </div>
+<div class="main_j_menu">
+
+<div class="menu__inner">
+    <p class="menu_img fadein">
+      <img src="images/menu_coffee.png" alt="" class="menu_img_inner">
+    </p>
+    
+    <div class="intro_m">
+
+    
+      <h2 class="main_title fadein" >
+        “特選<br>オリジナルブレンド”     
+      </h2>
+    <p class="intro1 fadein" >
+        30年以上変わらない、cafe・ド・リシャスの自慢の逸品。日本各地の珈琲専門店を飲み歩いて研究し、辿り着いたオリジナルブレンドです。
+    </p>
+    <p class="intro2 fadein" >
+        The pride and joy ofCafe De Licious, our original blend was developed through extensive research and has remained unchanged for over 30 years.
+    </p>
+
+    </div>
+    
+  </div>
+
+  <div class="main_wrapper">
+    <div class="g_menu_wrapper fadein">
+      <h1 class="menu_1">COFFEE
+      </h1>
+        <div class="menu_wrapp">
+            <div class="table_wrapper">
+                <table>
+                    <tr>
+                        <td class="oishiiyo"><p class="oishii">コーヒー</p></td>
+                        <td class="yen100"><p class="yen10">&yen;500</p></td>
+                    </tr>
+                    <tr>
+                        <td class="oishiiyo"><p class="oishii">カフェラテ</p></td>
+                        <td class="yen100"><p class="yen10">&yen;550</p></td>
+                    </tr>
+                    
+                </table>
+                <table>
+                    <tr>
+                        <td class="oishiiyo"><p class="oishii">カフェラテ</p></td>
+                        <td class="yen100"><p class="yen10">&yen;600</p></td>
+                    </tr>
+                    <tr>
+                        <td class="oishiiyo"><p class="oishii">エスプレッソ</p></td>
+                        <td class="yen100"><p class="yen10">&yen;300</p></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <h1 class="menu_2">TEE
+        </h1>
+        <div class="menu_wrapp">
+          <div class="table_wrapper">
+              <table>
+                  <tr>
+                      <td class="oishiiyo"><p class="oishii">アールグレイ</p></td>
+                      <td class="yen100"><p class="yen10">&yen;500</p></td>
+                  </tr>
+                  <tr>
+                      <td class="oishiiyo"><p class="oishii">ダージリン</p></td>
+                      <td class="yen100"><p class="yen10">&yen;500</p></td>
+                  </tr>
+                  
+              </table>
+              <table>
+                  <tr>
+                      <td class="oishiiyo"><p class="oishii">アッサム</p></td>
+                      <td class="yen100"><p class="yen10">&yen;500</p></td>
+                  </tr>
+              </table>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main_wrapper">
+    <div class="g_menu_wrapper fadein">
+      <h1 class="menu_3">SOFT DRINKS
+      </h1>
+        <div class="menu_wrapp">
+            <div class="table_wrapper">
+                <table>
+                    <tr>
+                        <td class="oishiiyo"><p class="oishii">オレンジジュース</p></td>
+                        <td class="yen100"><p class="yen10">&yen;500</p></td>
+                    </tr>
+                    <tr>
+                        <td class="oishiiyo"><p class="oishii">リンゴジュース</p></td>
+                        <td class="yen100"><p class="yen10">&yen;500</p></td>
+                    </tr>
+                    
+                </table>
+                <table>
+                    <tr>
+                        <td class="oishiiyo"><p class="oishii">トマトジュース</p></td>
+                        <td class="yen100"><p class="yen10">&yen;500</p></td>
+                    </tr>
+                    <!-- <tr>
+                        <td class="oishiiyo"><p class="oishii">エスプレッソ</p></td>
+                        <td class="yen100"><p class="yen10">&yen;300</p></td>
+                    </tr> -->
+                </table>
+            </div>
+        </div>
+        <!-- <div class="menu_wrapp">
+      </div>
+    </div> -->
+  </div>
+
+  
+  
+
+
+  <div class="shitalogo">
+    <a href="index.html">
+     <img src="images/logo3.png" alt="" class="shitalogoss">
+    </a>
+   </div>
+   <div class="footer_icon">
+     <ul class="follow-me">
+     <li><a href="https://twitter.com"></a></li>
+     <li><a href="https://www.facebook.com"></a></li>
+     <li><a href="https://plus.google.com"></a></li>
+     <li><a href="https://www.youtube.com"></a></li>
+   </ul>
+   </div>
+
+
+ 
+<footer>
+  <p class="footer_txt">&copy; 160-0022 Tōkyōto shinjukuku Shinjuku 3-chōme 1−1 cafe biru 1F
+    <br>TEL 080-079-0844
+    <br>OPEN 10:00 - 21:00 LAST ORDER 20:30.</p>
+<p class="footer_txt">&copy; Copyright © 2023 CAFE DE LICIOUS ALL RIGHTS RESERVED.</p>
+</footer> 
+</div>
+
+</div>
+</div>
+
+
+
+
+<!-- フワッと出る-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- スライド -->
+<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/js/6-1-7.js"></script>
+<script src="js/6-1-6.js"></script>
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>cafe・ド・リシャス</title>
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="index.html" rel="stylesheet" type="text/css">
+<link href="menu.html" rel="stylesheet">
+<link href="news_1.html" rel="stylesheet" type="text/css">
+<link href="news_2.html" rel="stylesheet" type="text/css">
+<link href="news_3.html" rel="stylesheet" type="text/css">
+<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/reset.css">
+<link rel="stylesheet" type="text/css" href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-3-1/css/6-3-1.css">
+<!--==============スライダー===============-->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="css/6-1-6.css">
+<!--==============フッターsnsアイコン===============-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- ホバー -->
+<link href="css/lightbox.css" rel="stylesheet" type="text/css">
+<link rel="canonical" href="https://lopan.jp/css-animation">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>/* Demo purposes only */
+  $(".hover").mouseleave(
+    function () {
+      $(this).removeClass("hover");
+    }
+  );</script>
+
+<!-- フワッと出る-->
+  <script>
+    $(function(){
+    $(window).scroll(function (){
+    $('.fadein').each(function(){
+    var targetElement = $(this).offset().top;
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll > targetElement - windowHeight + 200){
+    $(this).css('opacity','1');
+    $(this).css('transform','translateY(0)');
+    }
+    });
+    });
+    });
+    </script>
+
+</head>
+
+<body>
+  <div  class="header">
+<header>
+  <div class="nav">      
+     <!-- <p class="header_logo"><a href="index.html"><img src="images/header_logo.png" alt=""></a></p> -->
+  <ul class="header_inner">
+    <li class="header_txt"><a href="history.html" class="link__underbar">cafe・ド・リシャスの歴史<br>HISTORY</a></li>
+    <li class="header_txt"><a href="menu.html" class="link__underbar">メニュー<br>MENU</a></li>
+    <li class="header_txt"><a href="campaign.html" class="link__underbar">キャンペーン<br>CAMPAIGN</a></li>
+    <li class="header_txt"><a href="locations.html" class="link__underbar">店舗情報<br>LOCATIONS</a></li>
+  </ul>
+</div>
+</header>
+<p class="img"><img class="header_image" src="images/logo3.png"></p>
+    <div class="video-area">
+  <video class="video" poster="video.mp4" webkit-playsinline playsinline muted autoplay loop>
+  <source src="video.mp4" type="video/mp4">
+  </video>
+  <p class="scrolldown4"><span>Scroll</span></p>
+</div>
+</div>
+
+<div class="main_j">
+  <div class="about__inner">
+    
+    <div class="intro">
+    
+      <h2 class="main_title fadein" >
+        HISTORY
+      </h2>
+      <p class="main_title2 fadein" >
+        現在に至るまでの歴史
+      </p>
+    <p class="intro1 fadein" >
+      昭和20年終戦の年、<br>
+      新宿西口の焼け野原から始まりました。
+    </p>
+    <p class="intro2 fadein" >
+      Our story began in Shinjuku in 1945 in the burnt,<br>
+      empty aftermath of World War II.
+    </p>
+    
+
+    <a href="history.html" class="more1 bgleft animsition-link fadein"><span class="span">
+      More View</span>
+  </a>
+    </div>
+    <p class="his_img fadein">
+      <img src="images/his__img.jpeg" alt="" class="his_img_inner">
+    </p>
+  </div>
+
+  <div class="menu__inner">
+    <p class="menu_img fadein">
+      <img src="images/menu__img.jpg" alt="" class="menu_img_inner">
+    </p>
+    
+    <div class="intro_m">
+    
+      <h2 class="main_title fadein" >
+       MENU
+      </h2>
+      <p class="main_title2 fadein" >
+        こだわりのメニュー
+      </p>
+    <p class="intro1 fadein" >
+      cafe・ド・リシャスのこだわりのメニューをご紹介いたします。
+    </p>
+    <p class="intro2 fadein" >
+      Let me introduce you to the special menu of Cafe De Licious.
+    </p>
+    
+
+    <a href="menu.html" class="more1 bgleft animsition-link fadein"><span class="span">
+      More View</span>
+  </a>
+    </div>
+  </div>
+
+  <div class="about__inner">
+    
+    <div class="intro">
+    
+      <h2 class="main_title fadein" >
+        CAMPAIGN
+      </h2>
+      <p class="main_title2 fadein" >
+      キャンペーン
+      </p>
+    <p class="intro1 fadein" >
+      リニューアルオープン記念キャンペーン
+    </p>
+    <p class="intro2 fadein" >
+      campaign to commemorate the renewal opening
+    </p>
+    
+
+    <a href="campaign.html" class="more1 bgleft animsition-link fadein"><span class="span">
+      More View</span>
+  </a>
+    </div>
+    <p class="his_img fadein">
+      <img src="images/camp__img.jpg" alt="" class="his_img_inner">
+    </p>
+  </div>
+
+  <div class="menu__inner">
+    <p class="menu_img">
+      <img src="images/loc__img.jpg" alt="" class="menu_img_inner fadein">
+    </p>
+    
+    <div class="intro_m">
+    
+      <h2 class="main_title fadein" >
+        LOCATIONS
+      </h2>
+      <p class="main_title2 fadein" >
+        店舗情報
+      </p>
+    <p class="intro1 fadein" >
+      cafe・ド・リシャスの店舗情報をご紹介いたします。
+    </p>
+    <p class="intro2 fadein" >
+      Here is the store information of Cafe De Licious.
+    </p>
+    
+
+    <a href="locations.html" class="more1 bgleft animsition-link fadein"><span class="span">
+      More View</span>
+  </a>
+    </div>
+  </div>
+
+  <div class="shitalogo">
+   <a href="index.html">
+    <img src="images/logo3.png" alt="" class="shitalogos">
+   </a>
+</div>
+  <div class="footer_icon">
+    <ul class="follow-me">
+    <li><a href="https://twitter.com"></a></li>
+    <li><a href="https://www.facebook.com"></a></li>
+    <li><a href="https://plus.google.com"></a></li>
+    <li><a href="https://www.youtube.com"></a></li>
+  </ul>
+  </div>
+
+<footer>
+  <p class="footer_txt">&copy; 160-0022 Tōkyōto shinjukuku Shinjuku 3-chōme 1−1 cafe biru 1F
+    <br>TEL 080-079-0844
+    <br>OPEN 10:00 - 21:00 LAST ORDER 20:30.</p>
+<p class="footer_txt">&copy; Copyright © 2023 CAFE DE LICIOUS ALL RIGHTS RESERVED.</p>
+</footer> 
+</div>
+
+</div>
+</div>
+
+
+
+<!-- フワッと出る-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- スライド -->
+<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-7/js/6-1-7.js"></script>
+<script src="js/6-1-6.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bespoken | ビスポークンチーズケーキ専門店</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="css/drawer.css" rel="stylesheet">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+  <script>
+    $(document).ready(function() {
+    $('.drawer').drawer();
+    });
+    </script>
+    
+<link rel="stylesheet" type="text/css" href="css/6-6.css">
+</head>
+<body class="drawer drawer--right">
+
+
+  <button type="button" class="drawer-toggle drawer-hamburger">
+    <span class="sr-only">toggle navigation</span>
+    <span class="drawer-hamburger-icon"></span>
+    </button>
+    <nav class="drawer-nav" role="navigation">
+    <ul class="drawer-menu">
+      <li><a class="drawer-menu-item" href="index.html">HOME</a></li>
+      <li><a class="drawer-menu-item" href="index.html">STORY</a></li>
+      <li><a class="drawer-menu-item" href="index.html">PRODUCT</a></li>
+      <li><a class="drawer-menu-item" href="index.html">HOW TO</a></li>
+      <li><a class="drawer-menu-item" href="index.html">GIFT</a></li>
+    <div class="icon-div">
+      <li><a class="drawer-menu-item" href="account.html"><img src="images/account.png" alt="" class="icon"></a></li>
+      <li><a class="drawer-menu-item" href="cart.html"><img src="images/cart.png" alt="" class="icon"></a></li>
+    </div>
+    </ul>
+    </nav>
+<header class="header">
+<a href="index.html"><img src="images/logo-white.png" alt="" class="header-logo"></a> 
+
+
+</header>
+
+
+<main class="privacypage" id="home">
+    <div class="privacypage-div">
+
+
+      <h1 class="shipping-h1">配送ポリシー</h1>
+    
+
+    <div class="shipping-box">
+      <h2 class="privacypage-h2">クール宅急便</h2>
+      <p class="privacypage-txt">当店の商品は『ヤマト運輸　冷凍便』でお送りいたします。<br>
+
+        該当商品の詳細ページに出荷日を記載しております。<br>
+        ※常温便との同梱不可<br>
+        通常、販売開始日より２週間後の発送となりますのでご注意ください。<br>
+        発送日は商品ページをご確認ください。
+      </p>
+    </div>
+
+    <div class="shipping-box">
+      <p class="privacypage-txt">▼ 送料1,060円の地域（南東北, 信越, 関東, 北陸, 中部）<br>
+        宮城県　山形県　福島県　新潟県　長野県<br>
+        茨城県　栃木県　群馬県　埼玉県　千葉県　神奈川県　東京都　山梨県<br>
+        富山県　石川県　福井県<br>
+        静岡県　愛知県　三重県　岐阜県
+      </p>
+    </div>
+
+    <div class="shipping-box">
+      <p class="privacypage-txt">▼ 送料1,180円の地域（北東北, 関西）<br>
+        青森県　秋田県　岩手県<br>
+        大阪府　京都府　滋賀県　奈良県　和歌山県　兵庫県<br>
+      </p>
+    </div>
+
+    <div class="shipping-box">
+      <p class="privacypage-txt">▼ 送料1,310円の地域（中国, 四国）<br>
+        岡山県　広島県　山口県　鳥取県　島根県<br>
+        香川県　徳島県　愛媛県　高知県
+      </p>
+    </div>
+
+    <div class="shipping-box">
+    <p class="privacypage-txt">▼ 送料1,580円の地域（北海道, 九州）<br>
+      北海道<br>
+      福岡県　佐賀県　長崎県　熊本県　大分県　宮崎県　鹿児島県<br>
+      </p>
+    </div>
+
+    <div class="shipping-box">
+      <p class="privacypage-txt">▼ 送料1,840円の地域<br>
+        沖縄県<br>
+      </p>
+    </div>
+
+    <div class="shipping-box-last">
+      <p class="privacypage-txt">※ 配送は国内のみとさせていただきます。<br>
+        ※ 送料は税込表記です。<br>
+      </p>
+    </div>
+
+  
+  </div>
+</main>
+
+<footer class="footer"> 
+<div class="footer-box">
+  <div><p class="footer-p">&copy;2023 Bespoken All rights reserved.</p></div>
+  <div><a href="jasct.html" class="footer-link">特定商取引法に基づく表記</a></div>
+  <div><a href="privacypolicy.html" class="footer-link">PRIVACY POLICY</a></div>
+  <div><a href="sippingpolicy.html" class="footer-link">SHIPPING POLICY</a></div>
+</div>
+</footer>
+
+
+
+<script>
+$(function(){
+	// 変数に要素を入れる
+	var open = $('.modal-open'),
+		close = $('.modal-close'),
+		container = $('.modal-container');
+
+	//開くボタンをクリックしたらモーダルを表示する
+	open.on('click',function(){	
+		container.addClass('active');
+		return false;
+	});
+
+	//閉じるボタンをクリックしたらモーダルを閉じる
+	close.on('click',function(){	
+		container.removeClass('active');
+	});
+
+	//モーダルの外側をクリックしたらモーダルを閉じる
+	$(document).on('click',function(e) {
+		if(!$(e.target).closest('.modal-body').length) {
+			container.removeClass('active');
+		}
+	});
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,995 @@
+@charset "utf-8";
+
+/*========= index ===============*/
+.fadein{
+  opacity:0;
+  transform:translateY(30px);
+  transition:all 1s;
+  }
+
+.header{
+    position: relative;
+    height: 80vh;
+} 
+
+.header_logo{
+  margin: 28px 0 0 120px;
+}
+
+/*ナビゲーション*/
+.header_inner {
+  width: 50%;
+  height: 20px;
+  margin: 50px auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  line-height: 22px;
+}
+
+.nav{
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+}
+
+nav{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10000;
+}
+
+
+.link__underbar {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: 'Futura', sans-serif;
+  text-decoration: none;
+  display: block;
+}
+
+.link__underbar:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background:#eee;
+  transform: scale(0, 1);
+  transition: 0.4s;
+}
+
+.link__underbar:hover:before {
+  transform: scale(1);
+}
+
+.link__underbar:hover{
+  color: #eee;
+}
+
+.img{
+  margin: 30vh;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.header_img{
+  margin-top:-60px;
+  margin-left: -400px; 
+}
+
+.header_image{
+  height: 250px;
+}
+
+/*ビデオー背景動画*/
+.video-area{
+    position: fixed;
+    z-index: -1;/*最背面に設定*/
+    top: 0;
+    right:0;
+    left:0;
+    bottom:0;
+    overflow: hidden;
+}
+
+.video {
+    /*天地中央配置*/
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.video-area:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+
+
+/*=== スクロール ====*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown4{
+  /*描画位置※位置は適宜調整してください*/
+position:absolute;
+bottom:1%;
+right:50%;
+  /*矢印の動き1秒かけて永遠にループ*/
+animation: arrowmove 1s ease-in-out infinite;
+z-index: 999999;
+}
+
+/*下からの距離が変化して全体が下→上→下に動く*/
+@keyframes arrowmove{
+    0%{bottom:1%;}
+    50%{bottom:3%;}
+   100%{bottom:1%;}
+}
+
+/*Scrollテキストの描写*/
+.scrolldown4 span{
+  /*描画位置*/
+position: absolute;
+left:-20px;
+bottom:50px;
+  /*テキストの形状*/
+color: #eee;
+font-size: 0.7rem;
+letter-spacing: 0.05em;
+/*縦書き設定*/
+-ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+/* 矢印の描写 */
+.scrolldown4:before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 50px;
+  right: -6px;
+  /*矢印の形状*/
+  width: 1px;
+  height: 20px;
+  background: #eee;
+  transform: skewX(-31deg);
+}
+
+.scrolldown4:after{
+content:"";
+  /*描画位置*/
+position: absolute;
+bottom:50px;
+right:0;
+  /*矢印の形状*/
+width:1px;
+height: 50px;
+background:#eee;
+}
+
+/* ------------------↓MAIN↓-------------------- */
+
+.main_j{
+	position: relative;
+    z-index: 0 !important;
+  padding-top: 100px;
+
+}
+
+.main_j::before{
+	width: 100%;
+	z-index: -10;
+	content: "";
+    position: absolute;
+    right: 0;
+    height: 3200px;
+    background-color: #242424;
+}
+    
+
+/* ------------------↓HISTORY↓-------------------- */
+
+.about__inner{
+  /* display: block; */
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+	width: 70%;
+	max-width: 1200px;
+}
+
+.intro{
+	padding-top: 10rem;
+    /* z-index: 99; */
+}
+
+.main_title{
+	font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 50px;
+	line-height: 35px;
+	margin-bottom: 10px;
+  color: white;
+}
+.main_title2{
+	font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 20px;
+	line-height: 35px;
+	margin-bottom: 10px;
+  color: white;
+}
+
+
+.intro1{
+	font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 15px;
+	line-height: 35px;
+	margin-bottom: 10px;
+  color: white;
+}
+
+.intro2{
+	font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 12px;
+	line-height: 35px;
+	margin-bottom: 50px;
+  color: white;
+}
+
+
+.more1{
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #fff;/* ボーダーの色と太さ */
+	padding: 1.5rem 3.6rem;
+	text-decoration: none;
+	width: 9rem;
+	transition: ease .2s;
+}
+
+.span{
+	color:#fff;
+	font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 15px;
+	position: relative;
+	z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+}
+
+
+.more1{
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #fff;/* ボーダーの色と太さ */
+	padding: 1.5rem 3.6rem;
+	text-decoration: none;
+	width: 9rem;
+	transition: ease .2s;
+}
+
+
+.more1:hover .span{
+	color: #000;
+}
+
+.bgleft:before {
+	content: '';
+   /*絶対配置で位置を指定*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+   /*色や形状*/
+	background:#fff;/*背景色*/
+	width: 100%;
+   height: 100%;
+   /*アニメーション*/
+	transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+	transform: scale(0, 1);
+   transform-origin: right top;
+}
+
+/*hoverした際の形状*/
+.bgleft:hover:before{
+   transform-origin:left top;
+   transform:scale(1, 1);
+}
+
+
+.his_img_inner{
+  padding-top: 10rem;
+	margin: 0 auto;
+	width: 100%;
+
+}
+
+.his_img{
+    z-index: -1;
+    width: 50%;
+}
+
+
+/* ------------------↓MENU↓-------------------- */
+ 
+ .menu__inner{
+  display: flex;
+  margin: 0 auto;
+	width: 60%;
+	/* max-width: 1200px; */
+}
+ .menu_img{
+  padding-top: 10rem;
+	/* position: absolute;
+    top: 700px;
+    left: 120px; */
+    z-index: -1;
+    width: 80%;
+}
+
+
+.menu_img_inner{
+	margin: 0 auto;
+	width: 80%;
+
+}
+
+
+.intro_m{
+	padding-top: 10rem;
+}
+
+.main_title{
+	font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 50px;
+	line-height: 35px;
+	margin-bottom: 10px;
+  color: white;
+}
+.main_title2{
+	font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 20px;
+	line-height: 35px;
+	margin-bottom: 10px;
+  color: white;
+}
+
+
+.intro1{
+	font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 15px;
+	line-height: 35px;
+	margin-bottom: 10px;
+  color: white;
+}
+
+.intro2{
+	font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 12px;
+	line-height: 35px;
+	margin-bottom: 50px;
+  color: white;
+}
+
+
+.more1{
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #fff;/* ボーダーの色と太さ */
+	padding: 1.5rem 3.6rem;
+	text-decoration: none;
+	width: 9rem;
+	transition: ease .2s;
+}
+
+.span{
+	color:#fff;
+	font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 15px;
+	position: relative;
+	z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
+}
+
+
+.more1{
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #fff;/* ボーダーの色と太さ */
+	padding: 1.5rem 3.6rem;
+	text-decoration: none;
+	width: 9rem;
+	transition: ease .2s;
+}
+
+
+.more1:hover .span{
+	color: #000;
+}
+
+.bgleft:before {
+	content: '';
+   /*絶対配置で位置を指定*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+   /*色や形状*/
+	background:#fff;/*背景色*/
+	width: 100%;
+   height: 100%;
+   /*アニメーション*/
+	transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+	transform: scale(0, 1);
+   transform-origin: right top;
+}
+
+/*hoverした際の形状*/
+.bgleft:hover:before{
+   transform-origin:left top;
+   transform:scale(1, 1);
+}
+
+
+/* -------------------- */
+
+
+.shitalogo{
+  margin-top: 150px;
+  text-align: center;
+}
+
+.shitalogos{
+  display: inline-block;
+  width: 8%;
+}
+
+.shitalogoss{
+  display: inline-block;
+  width: 13%;
+}
+
+
+  /*========= フッター ===============*/
+.footer_icon{
+  margin: 50px auto;
+  display: flex;
+  }
+
+.follow-me {
+  margin: 0 auto;
+  display: flex;
+  list-style: none;
+  overflow: hidden;
+}
+.follow-me li {
+  margin: 0 20px;
+}
+.follow-me li a::before {
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 2px;
+  border-radius: 15px;
+  color: #fff;
+  display: inline-block;
+  font-family: FontAwesome;
+  font-size: 16px;
+  height: 42px; /* Button height */
+  line-height: 42px; /* Button height */
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  text-align: center;
+  width: 42px; /* Button width */
+}
+.follow-me li a[href*="amazon.co.jp"]::before,
+.follow-me li a[href*="amazon.com"]::before         { border-color: #ff9900; background-color: #ff9900; content: "\f270"; }
+.follow-me li a[href*="codepen.io"]::before         { border-color: #000000; background-color: #000000; content: "\f1cb"; }
+.follow-me li a[href*="delicious.com"]::before      { border-color: #3399ff; background-color: #3399ff; content: "\f1a5"; }
+.follow-me li a[href*="deviantart.com"]::before     { border-color: #05cc47; background-color: #05cc47; content: "\f1bd"; }
+.follow-me li a[href*="digg.com"]::before           { border-color: #000000; background-color: #000000; content: "\f1a6"; }
+.follow-me li a[href*="dribble.com"]::before        { border-color: #000000; background-color: #ea4c89; content: "\f17d"; }
+.follow-me li a[href*="dropbox.com"]::before        { border-color: #007ee5; background-color: #007ee5; content: "\f16b"; }
+.follow-me li a[href*="facebook.com"]::before       { border-color: #3b5998; background-color: #3b5998; content: "\f09a"; }
+.follow-me li a[href*="feedly.com"]::before         { border-color: #6cc655; background-color: #6cc655; content: "\f09e"; }
+.follow-me li a[href*="flickr.com"]::before         { border-color: #0063cc; background-color: #0063dc; content: "\f16e"; }
+.follow-me li a[href*="foursquare.com"]::before     { border-color: #f94877; background-color: #f94877; content: "\f180"; }
+.follow-me li a[href*="github.com"]::before         { border-color: #181717; background-color: #181717; content: "\f09b"; }
+.follow-me li a[href*="plus.google.com"]::before    { border-color: #dc4e41; background-color: #dc4e41; content: "\f0d5"; }
+.follow-me li a[href*="b.hatena.ne.jp"]::before     { border-color: #008fde; background-color: #008fde; content: "\f027"; font-family: blogicon; }
+.follow-me li a[href*="instagram.com"]::before      { border-color: #125688; background-color: #125688; content: "\f16d"; }
+.follow-me li a[href*="last.fm"]::before            { border-color: #d51007; background-color: #d51007; content: "\f202"; }
+.follow-me li a[href*="linkedin.com"]::before       { border-color: #0077b5; background-color: #0077b5; content: "\f0e1"; }
+.follow-me li a[href*="nicovideo.jp"]::before       { border-color: #eaeaea; background-color: #eaeaea; content: "\f047"; font-family: blogicon; }
+.follow-me li a[href*="pinterest.com"]::before      { border-color: #bd081c; background-color: #bd081c; content: "\f0d2"; }
+.follow-me li a[href*="getpocket.com"]::before      { border-color: #ef3f56; background-color: #ef3f56; content: "\f265"; }
+.follow-me li a[href*="reddit.com"]::before         { border-color: #ff4500; background-color: #ff4500; content: "\f1a1"; }
+.follow-me li a[href*="skype.com"]::before,
+.follow-me li a[href*="skype:"]::before             { border-color: #00aff0; background-color: #00aff0; content: "\f17e"; }
+.follow-me li a[href*="slideshare.net"]::before     { border-color: #2d2d2d; background-color: #2d2d2d; content: "\f1e7"; }
+.follow-me li a[href*="spotify.com"]::before        { border-color: #84bd00; background-color: #84bd00; content: "\f1bc"; }
+.follow-me li a[href*="steamcommunity.com"]::before { border-color: #171a21; background-color: #171a21; content: "\f1b6"; }
+.follow-me li a[href*="stumbleupon.com"]::before    { border-color: #eb4929; background-color: #eb4929; content: "\f1a4"; }
+.follow-me li a[href*="tumblr.com"]::before         { border-color: #36465d; background-color: #36465d; content: "\f173"; }
+.follow-me li a[href*="twitch.tv"]::before          { border-color: #6441a5; background-color: #6441a5; content: "\f1e8"; }
+.follow-me li a[href*="twitter.com"]::before        { border-color: #55acee; background-color: #55acee; content: "\f099"; }
+.follow-me li a[href*="vimeo.com"]::before          { border-color: #1ab7ea; background-color: #1ab7ea; content: "\f27d"; }
+.follow-me li a[href*="vine.co"]::before            { border-color: #11b58a; background-color: #11b58a; content: "\f1ca"; }
+.follow-me li a[href*="weibo.com"]::before          { border-color: #e6162d; background-color: #e6162d; content: "\f18a"; }
+.follow-me li a[href*="whatsapp.com"]::before       { border-color: #64d548; background-color: #64d548; content: "\f232"; }
+.follow-me li a[href*="wordpress.com"]::before,
+.follow-me li a[href*="wordpress.org"]::before      { border-color: #21759b; background-color: #21759b; content: "\f19a"; }
+.follow-me li a[href*="youtube.com"]::before        { border-color: #cd201f; background-color: #cd201f; content: "\f16a"; }
+.follow-me li a[href$="/feed"]::before              { border-color: #ffa500; background-color: #ffa500; content: "\f09e"; }
+.follow-me li a[href$="/subscribe"]::before         { border-color: #363636; background-color: #363636; content: "\f000"; font-family: blogicon; }
+.follow-me li a:hover::before {
+  background-color: #fff;
+}
+.follow-me li a[href*="amazon.co.jp"]:hover::before,
+.follow-me li a[href*="amazon.com"]:hover::before         { color: #ff9900; }
+.follow-me li a[href*="codepen.io"]:hover::before         { color: #000000; }
+.follow-me li a[href*="delicious.com"]:hover::before      { color: #3399ff; }
+.follow-me li a[href*="deviantart.com"]:hover::before     { color: #05cc47; }
+.follow-me li a[href*="digg.com"]:hover::before           { color: #000000; }
+.follow-me li a[href*="dribble.com"]:hover::before        { color: #ea4c89; }
+.follow-me li a[href*="dropbox.com"]:hover::before        { color: #007ee5; }
+.follow-me li a[href*="facebook.com"]:hover::before       { color: #3b5998; }
+.follow-me li a[href*="feedly.com"]:hover::before         { color: #6cc655; }
+.follow-me li a[href*="flickr.com"]:hover::before         { color: #0063dc; }
+.follow-me li a[href*="foursquare.com"]:hover::before     { color: #f94877; }
+.follow-me li a[href*="github.com"]:hover::before         { color: #181717; }
+.follow-me li a[href*="plus.google.com"]:hover::before    { color: #dc4e41; }
+.follow-me li a[href*="b.hatena.ne.jp"]:hover::before     { color: #008fde; }
+.follow-me li a[href*="instagram.com"]:hover::before      { color: #125688; }
+.follow-me li a[href*="last.fm"]:hover::before            { color: #d51007; }
+.follow-me li a[href*="linkedin.com"]:hover::before       { color: #0077b5; }
+.follow-me li a[href*="nicovideo.jp"]:hover::before       { color: #eaeaea; }
+.follow-me li a[href*="pinterest.com"]:hover::before      { color: #bd081c; }
+.follow-me li a[href*="getpocket.com"]:hover::before      { color: #ef3f56; }
+.follow-me li a[href*="reddit.com"]:hover::before         { color: #ff4500; }
+.follow-me li a[href*="skype.com"]:hover::before,
+.follow-me li a[href*="skype:"]:hover::before             { color: #00aff0; }
+.follow-me li a[href*="slideshare.net"]:hover::before     { color: #2d2d2d; }
+.follow-me li a[href*="spotify.com"]:hover::before        { color: #84bd00; }
+.follow-me li a[href*="steamcommunity.com"]:hover::before { color: #171a21; }
+.follow-me li a[href*="stumbleupon.com"]:hover::before    { color: #eb4929; }
+.follow-me li a[href*="tumblr.com"]:hover::before         { color: #36465d; }
+.follow-me li a[href*="twitch.tv"]:hover::before          { color: #6441a5; }
+.follow-me li a[href*="twitter.com"]:hover::before        { color: #55acee; }
+.follow-me li a[href*="vimeo.com"]:hover::before          { color: #1ab7ea; }
+.follow-me li a[href*="vine.co"]:hover::before            { color: #11b58a; }
+.follow-me li a[href*="weibo.com"]:hover::before          { color: #e6162d; }
+.follow-me li a[href*="whatsapp.com"]:hover::before       { color: #64d548; }
+.follow-me li a[href*="wordpress.com"]:hover::before,
+.follow-me li a[href*="wordpress.org"]:hover::before      { color: #21759b; }
+.follow-me li a[href*="youtube.com"]:hover::before        { color: #cd201f; }
+.follow-me li a[href$="/feed"]:hover::before              { color: #ffa500; }
+.follow-me li a[href$="/subscribe"]:hover::before         { color: #363636; }
+
+footer{
+  text-align: center;
+  width: auto;
+  height: 90px;
+  background-color: #242424;
+}
+.footer_txt{
+  color: #fff;
+  /* padding: 35px 0; */
+  margin-top: 15px;
+  font-family:  sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  line-height: 150%;
+}
+
+/*========= HISTORY ===============*/
+
+.header_kaso{
+  background-image: url(../images/his_top.jpg);
+  width: 100%; /* 너비를 100%로 설정하여 부모 요소의 너비에 맞게 만듭니다. */
+  height: 100vh; /* 높이를 100vh로 설정하여 뷰포트 높이에 맞게 만듭니다. */
+  background-size: cover; /* 배경 이미지를 컨테이너에 맞게 확장합니다. */
+  background-position: center; /* 배경 이미지를 가운데 정렬합니다. */
+  background-repeat: no-repeat; /* 배경 이미지 반복을 비활성화합니다. */
+} 
+
+.top_kaso{
+  /* display: flex; */
+}
+
+.his{
+  text-align: center; /* 텍스트를 가운데 정렬합니다. */
+  display: flex; /* Flexbox를 사용합니다. */
+  justify-content: center; /* 가로로 가운데 정렬합니다. */
+  font-size: 40px;
+  color: white;
+  /* margin-top: 200px; */
+  position: relative;
+  top: 320px;
+  font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+}
+
+.his_sub{
+  text-align: center; /* 텍스트를 가운데 정렬합니다. */
+  display: flex; /* Flexbox를 사용합니다. */
+  justify-content: center; /* 가로로 가운데 정렬합니다. */
+  font-size: 30px;
+  color: white;
+  /* margin-top: 200px; */
+  position: relative;
+  top: 370px;
+  font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+}
+
+.title_line{
+  border-top: 1px solid #ffffff;
+  position: relative;
+  text-align: center; /* 텍스트를 가운데 정렬합니다. */
+  display: flex; /* Flexbox를 사용합니다. */
+  justify-content: center; /* 가로로 가운데 정렬합니다. */
+  color: white;
+  position: relative;
+  top: 345px;
+  width: 200px;
+  margin: 0 auto;
+}
+.his_main_j{
+	position: relative;
+    z-index: 0 !important;
+    padding-top: 100px;
+
+}
+
+.his_main_j::before{
+	width: 100%;
+	z-index: -10;
+	content: "";
+    position: absolute;
+    right: 0;
+    height: 1600px;
+    background-color: #242424;
+}
+
+.history__inner{
+  /* display: block; */
+  margin: 0 auto;
+	width: 70%;
+	max-width: 1200px;
+}
+
+.intro_his{
+	padding-top: 7rem;
+  margin: 0 auto;
+    /* z-index: 99; */
+    text-align: center;
+}
+
+.intro1_his{
+	font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 15px;
+	line-height: 30px;
+	margin-bottom: 30px;
+  color: white;
+}
+
+.intro2_his{
+	font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 12px;
+	line-height: 30px;
+	margin-bottom: 50px;
+  color: white;
+}
+
+.his_img2{
+  z-index: -1;
+}
+
+
+.his_img_inner2{
+  padding-top: 5rem;
+	margin: 0 auto;
+  width: 70%;
+  display: flex; /* Flexbox를 사용합니다. */
+  justify-content: center; /* 가로로 가운데 정렬합니다. */
+}
+
+
+
+/*============== MENU ===============*/
+
+.header_kaso2{
+  background-image: url(../images/menu__img_back.jpg);
+  width: 100%; /* 너비를 100%로 설정하여 부모 요소의 너비에 맞게 만듭니다. */
+  height: 100vh; /* 높이를 100vh로 설정하여 뷰포트 높이에 맞게 만듭니다. */
+  background-size: cover; /* 배경 이미지를 컨테이너에 맞게 확장합니다. */
+  background-position: center; /* 배경 이미지를 가운데 정렬합니다. */
+  background-repeat: no-repeat; /* 배경 이미지 반복을 비활성화합니다. */
+} 
+
+.main_title{
+  font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 30px;
+	line-height: 55px;
+	margin-bottom: 10px;
+  color: white;
+}
+
+.main_j_menu{
+	position: relative;
+    z-index: 0 !important;
+  padding-top: 100px;
+}
+
+.main_j_menu::before{
+	width: 100%;
+	z-index: -10;
+	content: "";
+    position: absolute;
+    right: 0;
+    height: 2200px;
+    background-color: #242424;
+}
+
+.menu__inners{
+  /* display: block; */
+  display: flex;
+  margin: 0 auto;
+	width: 70%;
+	/* max-width: 1200px; */
+}
+
+.menu_imgs{
+  padding-top: 10rem;
+	/* position: absolute;
+    top: 700px;
+    left: 120px; */
+    z-index: -1;
+    /* width: 100%; */
+}
+
+
+.menu_img_inners{
+	/* margin: 0 auto; */
+	margin: 0 auto;
+	width: 50%;
+
+}
+
+
+.intro_menu{
+  /* display: flex; */
+	padding-top: 10rem;
+    /* z-index: 99; */
+}
+
+/* -----ちゅが------ */
+.main_wrapper{
+  width: 70%;
+  min-height: 100%;
+  margin: 0 auto;
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.menu_wrapp{
+  width: 100%;
+  height: 125px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.table_wrapper{
+  width: 548px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+table{
+  width: 254px;
+  height: 100%;
+}
+
+.oishiiyo{
+  vertical-align: baseline;
+}
+
+.oishii{
+  font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+  size: 16px;
+  font-weight: lighter;
+  letter-spacing: 0.1em;
+  color: #fff;
+  border-bottom:1px solid #ffffff;
+}
+
+.yen100{
+  vertical-align: baseline;
+  text-align: right;
+}
+
+.yen10{
+  font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+  size: 20px;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+  color: #fff;
+  border-bottom:1px solid #ffffff;
+}
+
+.g_menu_wrapper_end{
+  /* margin-bottom: 260px; */
+}
+
+.menu_1{
+  font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+  font-weight: bolder;
+  font-size: 25px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -220px;
+}
+.menu_2{
+  font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+  font-weight: bolder;
+  font-size: 25px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -10px;
+}
+
+.menu_3{
+  font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+  font-weight: bolder;
+  font-size: 25px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -120px;
+}
+
+
+
+/*============== campaign ===============*/
+
+.header_kaso_cam{
+  background-image: url(../images/camp__img_back.jpg);
+  width: 100%; /* 너비를 100%로 설정하여 부모 요소의 너비에 맞게 만듭니다. */
+  height: 100vh; /* 높이를 100vh로 설정하여 뷰포트 높이에 맞게 만듭니다. */
+  background-size: cover; /* 배경 이미지를 컨테이너에 맞게 확장합니다. */
+  background-position: center; /* 배경 이미지를 가운데 정렬합니다. */
+  background-repeat: no-repeat; /* 배경 이미지 반복을 비활성화합니다. */
+} 
+
+.intro2_cam{
+	font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 15px;
+	line-height: 35px;
+	margin-bottom: 10px;
+  color: rgb(144, 144, 144);
+  margin-top: 20px;
+}
+
+.intro3_cam{
+	font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 16px;
+	line-height: 35px;
+	margin-bottom: 10px;
+  color: rgb(213, 213, 213);
+  margin-top: 20px;
+}
+
+
+.intro1_cam{
+	font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 28px;
+	line-height: 30px;
+	margin-bottom: 30px;
+  color: white;
+}
+
+.cam_img_inner2{
+  padding-top: 5rem;
+	margin: 0 auto;
+  width: 100%;
+  display: flex; /* Flexbox를 사용합니다. */
+  justify-content: center; /* 가로로 가운데 정렬합니다. */
+}
+
+
+
+/*============== locations ===============*/
+
+.header_loc{
+  background-image: url(../images/loc_bb.jpg);
+  width: 100%; /* 너비를 100%로 설정하여 부모 요소의 너비에 맞게 만듭니다. */
+  height: 100vh; /* 높이를 100vh로 설정하여 뷰포트 높이에 맞게 만듭니다. */
+  background-size: cover; /* 배경 이미지를 컨테이너에 맞게 확장합니다. */
+  background-position: center; /* 배경 이미지를 가운데 정렬합니다. */
+  background-repeat: no-repeat; /* 배경 이미지 반복을 비활성화합니다. */
+} 
+
+.loc_main_j{
+	position: relative;
+    z-index: 0 !important;
+    padding-top: 100px;
+
+}
+
+.loc_main_j::before{
+	width: 100%;
+	z-index: -10;
+	content: "";
+    position: absolute;
+    right: 0;
+    height: 1800px;
+    background-color: #242424;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh; /* 화면의 높이만큼 중앙에 정렬합니다. 필요에 따라 조절할 수 있습니다. */
+}
+
+.loc_line{
+  border-top: 1px solid #ffffff;
+  position: relative;
+  text-align: center; /* 텍스트를 가운데 정렬합니다. */
+  display: flex; /* Flexbox를 사용합니다. */
+  justify-content: center; /* 가로로 가운데 정렬합니다. */
+  color: white;
+  position: relative;
+  /* top: 235px; */
+  width: 150px;
+  margin: 0 auto;
+}
+
+.loc_title{
+	font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 45px;
+	line-height: 35px;
+	margin-bottom: 50px;
+  color: white;
+}
+
+.intro1_loc{
+	font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 20px;
+	line-height: 30px;
+	margin-bottom: 5px;
+  color: white;
+}
+
+.intro2_loc{
+	font-family: "ヒラギノ明朝 ProN","MS 明朝",serif;
+	font-size: 12px;
+	line-height: 30px;
+	margin-bottom: 30px;
+  color: white;
+}
